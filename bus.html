@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السلوك داخل باص المدرسة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .face-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .face {
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .selected {
+            background-color: yellow;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .header-container img {
+            height: 80px;
+        }
+        .input-container {
+            margin: 10px 0;
+        }
+        .input-container label {
+            margin: 0 5px;
+        }
+        .notes {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-container">
+    <img  src="SchoolBus.png"  alt="School Bus">
+    <h1>السلوك داخل باص المدرسة</h1>
+</div>
+
+<div class="input-container">
+    <label>اسم الطالب:</label> <input type="text" id="studentName">
+    <label>المعززات:</label> <input type="text" id="rewards">
+    <label>التاريخ:</label> <input type="date" id="date">
+    <label>الفصل:</label> <input type="text" id="class">
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>الفترات/الأيام</th>
+            <th>الاثنين</th>
+            <th>الثلاثاء</th>
+            <th>الأربعاء</th>
+            <th>الخميس</th>
+            <th>الجمعة</th>
+            <th>الملاحظات</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- صفوف الفترات -->
+        <tr>
+            <td>الوصول إلى المركز</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+        <tr>
+            <td>العودة إلى البيت</td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><div class="face-container"><span class="face" onclick="selectFace(this)">😊</span><span class="face" onclick="selectFace(this)">😐</span><span class="face" onclick="selectFace(this)">😞</span></div></td>
+            <td><textarea class="notes"></textarea></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    function selectFace(face) {
+        // العثور على جميع الأوجه في نفس الخلية وإزالة التحديد منها
+        const allFaces = face.parentElement.querySelectorAll('.face');
+        allFaces.forEach(f => f.classList.remove('selected'));
+
+        // إضافة التحديد للوجه الذي تم النقر عليه فقط
+        face.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>
