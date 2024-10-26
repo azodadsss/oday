@@ -15,6 +15,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            font-size: 1em;
         }
         th, td {
             border: 1px solid black;
@@ -39,7 +40,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap; /* لجعل العنوان والصورة يظهران على أسطر منفصلة في الشاشات الصغيرة */
+            flex-wrap: wrap;
             margin-bottom: 10px;
         }
         .header-container img {
@@ -49,12 +50,15 @@
         .input-container {
             margin: 10px 0;
             display: flex;
-            flex-wrap: wrap; /* تكديس الحقول عند صغر الشاشة */
+            flex-wrap: wrap;
             gap: 10px;
+            justify-content: center;
         }
         .input-container label,
         .input-container input {
-            margin: 5px;
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
         }
         .notes {
             width: 100%;
@@ -62,33 +66,40 @@
             text-align: center;
         }
 
-        /* Media Query للشاشات الصغيرة مثل الهواتف */
+        /* Media Query للهواتف */
         @media (max-width: 600px) {
             th, td {
-                padding: 4px; /* تصغير الهوامش */
+                padding: 6px;
             }
             .face-container {
                 gap: 5px;
             }
             .face {
-                font-size: 1.2em; /* تقليل حجم الرموز التعبيرية */
+                font-size: 1.3em;
             }
             .header-container h1 {
-                font-size: 1.5em; /* تقليل حجم العنوان */
+                font-size: 1.5em;
             }
             .input-container label, .input-container input {
-                width: 100%; /* جعل الحقول كاملة العرض */
-                text-align: center;
+                width: 100%;
+                max-width: 100%;
             }
         }
 
-        /* Media Query للشاشات المتوسطة مثل الأجهزة اللوحية */
+        /* Media Query للأجهزة اللوحية */
         @media (max-width: 1024px) {
             .header-container h1 {
                 font-size: 2em;
             }
             .face {
                 font-size: 1.3em;
+            }
+            .input-container label, .input-container input {
+                width: 100%;
+                max-width: 100%;
+            }
+            table {
+                font-size: 0.9em;
             }
         }
     </style>
